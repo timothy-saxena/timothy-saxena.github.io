@@ -67,11 +67,17 @@
     }
 
     .card {
-      background: var(--card);
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(145deg, #0f172a, #020617);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 28px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
     }
 
     .skills span {
@@ -98,6 +104,12 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
+    }
+
+    .project-tech {
+      color: var(--accent);
+      font-size: 0.9rem;
+      margin: 8px 0 14px;
     }
   </style>
 </head>
@@ -159,7 +171,11 @@
 
     <div class="card">
       <h3>Sudoku Solver</h3>
-      <p>Solves a 9×9 Sudoku puzzle using recursion and backtracking while satisfying all constraints.</p>
+      <p class="project-tech">Backtracking • Recursion • DSA</p>
+      <p>
+        Solves a 9×9 Sudoku puzzle using recursive backtracking
+        with constraint checks and pruning.
+      </p>
     </div>
 
     <div class="card">
