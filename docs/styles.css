@@ -90,15 +90,28 @@ p {
 /* HOME */
 .home {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 4rem;
-    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 2.5rem;
 }
 
 .home-content {
-    max-width: 650px;
-    text-align: left;
+    max-width: 700px;
+}
+
+/* PROFILE IMAGE — SQUARE LIKE FRIEND */
+.home-img {
+    margin-top: 2rem;
+}
+
+.home-img img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
 }
 
 /* TEXT ANIMATION */
@@ -154,13 +167,6 @@ p {
     background: var(--main-color);
     color: #000;
     box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
-}
-
-/* PROFILE IMAGE */
-.home-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .profile-frame {
