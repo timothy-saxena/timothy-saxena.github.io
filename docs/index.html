@@ -2,80 +2,152 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Timothy Saxena</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timothy Saxena</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
+    <canvas id="c"></canvas>
 
-  <!-- MATRIX CANVAS -->
-  <canvas id="c"></canvas>
+    <header class="header">
+        <a href="#home" class="logo"></a>
+        <nav class="navbar">
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#skills">SKILLS</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Timothy Saxena</h1>
+            <h3 class="text-animation"><span></span></h3>
 
-  <!-- NAVBAR -->
-  <header class="header">
-    <a href="#home" class="logo"></a>
+            <div class="text-container">
+                <div class="text-wrapper">
+                    <div class="text active" id="text1">ALGORITHM SAYS YES</div>
+                    <div class="text" id="text2">EDGE CASE SAYS NO :)</div>
+                </div>
+            </div>
+            <p>
+                Computer Science undergraduate at
+                <strong>Mahatma Gandhi Institute of Technology, Hyderabad</strong>,
+                focused on Data Structures, Algorithms, and building strong fundamentals
+                in software engineering.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/timothy-saxena-353229329/" target="_blank" title="LinkedIn">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
 
-    <nav class="navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-    </nav>
-  </header>
+                <a href="https://github.com/timothy-saxena" target="_blank" title="GitHub">
+                    <i class='bx bxl-github'></i>
+                </a>
 
-  <!-- HOME -->
-  <section class="home" id="home">
+                <a href="https://leetcode.com/u/timothy_saxena/" target="_blank" title="LeetCode">
+                    <i class='bx bx-code'></i>
+                </a>
 
-    <div class="home-content">
-      <h1>Timothy Saxena</h1>
+                <a href="https://codeforces.com/profile/timothy_saxena" target="_blank" title="Codeforces">
+                    <i class='bx bx-trophy'></i>
+                </a>
+            </div>
 
-      <div class="text-container">
-        <div class="text-wrapper">
-          <div class="text active" id="text1">ALGORITHM SAYS YES</div>
-          <div class="text" id="text2">EDGE CASE SAYS NO :)</div>
         </div>
-      </div>
+        <div class="home-img">
+            <img src="./profile-1.png" alt="">
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+        <div class="about-content">
+            <div class="about-text">
+                <div class="skills">
 
-      <p>
-        Computer Science undergraduate at
-        <strong>Mahatma Gandhi Institute of Technology, Hyderabad</strong>,
-        focused on Data Structures, Algorithms, and building strong fundamentals
-        in software engineering.
-      </p>
+                    <div class="skill-category">
+                        <h4>Technical Skills</h4>
+                        <p>
+                            Data Structures & Algorithms (Arrays, Strings, Hashing, Recursion, Backtracking, Graphs,
+                            Trees) •
+                            Object-Oriented Programming (Java) •
+                            System Design (foundational concepts: scalability, APIs, databases, caching) •
+                            Java • Python • JavaScript •
+                            Node.js & Express.js •
+                            Oracle SQL •
+                            HTML & CSS •
+                            Git & GitHub •
+                            Postman •
+                            Strong problem-solving with focus on correctness and edge cases
+                        </p>
+                    </div>
 
-      <div class="social-icons">
-        <a href="#"><i class="bx bxl-linkedin"></i></a>
-        <a href="#"><i class="bx bxl-github"></i></a>
-        <a href="#"><i class="bx bx-code"></i></a>
-        <a href="#"><i class="bx bx-trophy"></i></a>
-      </div>
+                    <div class="skill-category">
+                        <h4>Creative Skills</h4>
+                        <p>
+                            Hands-on building & fixing mindset (mechanical and electrical tools) •
+                            Automotive enthusiast & car detailing (pressure washing, waxing, interior detailing) •
+                            Manual driving & vehicle dynamics awareness •
+                            Touch typing (level 132 Monkeytype) •
+                            Team-BHP automotive community member •
+                            Curiosity about construction, infrastructure, and how real-world systems are built
+                        </p>
+                    </div>
 
-      <div class="resume-btn">
-        <a href="#" class="resume-link">Download Resume</a>
-      </div>
-    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
 
-    <div class="home-img">
-      <div class="img-box">
-        <img src="profile.png" alt="Timothy Saxena">
-      </div>
-    </div>
+        <div class="projects-container">
 
-  </section>
+            <a href="#" class="project-item">
+                <h3>Sudoku Solver</h3>
+                <p>
+                    Built a 9×9 Sudoku solver using recursion and backtracking,
+                    ensuring all row, column, and subgrid constraints are satisfied.
+                </p>
+            </a>
 
-  <!-- JS -->
-  <script src="./script.js"></script>
+            <a href="#" class="project-item">
+                <h3>Task Scheduling Using Graphs</h3>
+                <p>
+                    Implemented task scheduling using topological sorting to
+                    determine a valid execution order based on dependencies.
+                </p>
+            </a>
+
+            <a href="#" class="project-item">
+                <h3>Roman Numeral to Integer Converter</h3>
+                <p>
+                    Converted Roman numerals to integers by handling subtraction
+                    rules and symbol precedence.
+                </p>
+            </a>
+
+            <a href="#" class="project-item">
+                <h3>Calendar Date Utility</h3>
+                <p>
+                    Utility to compute the day of the week and the number of days
+                    between two dates using modular logic.
+                </p>
+            </a>
+
+            <a href="#" class="project-item">
+                <h3>To-Do List (Node.js)</h3>
+                <p>
+                    Simple CRUD-based To-Do application built using Node.js and Express.
+                </p>
+            </a>
+
+        </div>
+    </section>
+    <script src="./script.js"></script>
 </body>
 
 </html>
