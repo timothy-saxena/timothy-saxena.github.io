@@ -33,7 +33,7 @@ function drawMatrix() {
     }
 }
 
-setInterval(drawMatrix, 35);
+setInterval(drawMatrix, 36);
 
 /* TEXT TOGGLE */
 const text1 = document.getElementById("text1");
