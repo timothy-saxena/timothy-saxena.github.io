@@ -250,26 +250,32 @@ h3 {
     margin-top: 3rem;
 }
 
-.profile-wrapper {
+/* PROFILE IMAGE FIX */
+.profile-frame {
     width: 260px;
     height: 260px;
     border-radius: 50%;
-    padding: 6px;
-    background: linear-gradient(135deg, var(--main-color), #00994d);
+    /* perfect circle */
+    padding: 5px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-wrapper:hover {
+.profile-frame:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 35px rgba(0, 204, 102, 0.6);
+    box-shadow: 0 35px 80px rgba(56, 189, 248, 0.6);
 }
 
 .profile-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #000;
+    object-fit: cover;
+    /* THIS IS THE KEY */
+    object-position: center top;
+    /* keeps your FACE visible */
+    background-color: #000;
 }
 
 .text-container {
