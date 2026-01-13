@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -108,6 +108,237 @@
   </footer>
   <script src="matrix.js"></script>
 
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timothy Saxena</title>
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <!-- Matrix Background -->
+  <canvas id="c"></canvas>
+
+  <!-- Navbar -->
+  <header class="header">
+    <a href="#home" class="logo"></a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home" class="active">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#skills">SKILLS</a>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h1>Timothy Saxena</h1>
+
+      <div class="text-container">
+        <div class="text-wrapper">
+          <div class="text active" id="text1">ALGORITHM SAYS YES</div>
+          <div class="text" id="text2">EDGE CASE SAYS NO :)</div>
+        </div>
+      </div>
+
+      <p>
+        Computer Science undergraduate focused on Data Structures,
+        Algorithms, and building strong fundamentals in software engineering.
+      </p>
+
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/timothy-saxena-353229329/" target="_blank">
+          <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="https://github.com/timothy-saxena" target="_blank">
+          <i class='bx bxl-github'></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2 class="heading">About <span>Me</span></h2>
+
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          I am a B.Tech Computer Science student with a strong interest in
+          problem solving, algorithms, and writing clean, correct code.
+        </p>
+        <p>
+          I enjoy breaking problems down from brute-force approaches to
+          optimized solutions and understanding the “why” behind each step.
+        </p>
+        <p>
+          Currently focused on strengthening my DSA fundamentals and
+          preparing for software engineering interviews.
+        </p>
+
+        <div class="skills">
+          <div class="skill-category">
+            <h4>Core Focus</h4>
+            <p>
+              Data Structures • Algorithms • Graphs • Recursion •
+              Backtracking • Problem Solving
+            </p>
+          </div>
+
+          <div class="skill-category">
+            <h4>Tools & Languages</h4>
+            <p>
+              C++ • Python • Java • Git • GitHub • SQL • Basic Web (HTML/CSS)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <h2 class="heading">My <span>Projects</span></h2>
+
+    <div class="projects-container">
+
+      <a href="#" class="project-item">
+        <h3>Sudoku Solver</h3>
+        <p>
+          Built a 9×9 Sudoku solver using recursion and backtracking,
+          ensuring all row, column, and subgrid constraints are satisfied.
+        </p>
+      </a>
+
+      <a href="#" class="project-item">
+        <h3>Task Scheduling Using Graphs</h3>
+        <p>
+          Implemented task scheduling using topological sorting to
+          determine a valid execution order based on dependencies.
+        </p>
+      </a>
+
+      <a href="#" class="project-item">
+        <h3>Roman Numeral to Integer Converter</h3>
+        <p>
+          Converted Roman numerals to integers by handling subtraction
+          rules and symbol precedence.
+        </p>
+      </a>
+
+      <a href="#" class="project-item">
+        <h3>Calendar Date Utility</h3>
+        <p>
+          Utility to compute the day of the week and the number of days
+          between two dates using modular logic.
+        </p>
+      </a>
+
+      <a href="#" class="project-item">
+        <h3>To-Do List (Node.js)</h3>
+        <p>
+          Simple CRUD-based To-Do application built using Node.js and Express.
+        </p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skill" id="skills">
+    <h1>My Skills</h1>
+
+    <div class="skills-grid">
+
+      <!-- Technical Skills -->
+      <div class="skills-card">
+        <h3>Technical Proficiency</h3>
+
+        <div class="skill-bars">
+
+          <div class="skill-item" data-level="85">
+            <div class="skill-info">
+              <span class="skill-name">C++</span>
+              <span class="skill-percentage">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-level="75">
+            <div class="skill-info">
+              <span class="skill-name">Python</span>
+              <span class="skill-percentage">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-level="70">
+            <div class="skill-info">
+              <span class="skill-name">Java</span>
+              <span class="skill-percentage">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+
+          <div class="skill-item" data-level="80">
+            <div class="skill-info">
+              <span class="skill-name">DSA</span>
+              <span class="skill-percentage">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Metrics -->
+      <div class="skills-card">
+        <h3>Practice Metrics</h3>
+
+        <div class="metrics-container">
+          <div class="metric-item">
+            <div class="metric-header">
+              <i class='bx bx-code'></i>
+              <span>LeetCode Problems</span>
+              <span class="metric-value">70+</span>
+            </div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-header">
+              <i class='bx bx-git-branch'></i>
+              <span>GitHub Repos</span>
+              <span class="metric-value">10+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="./matrix.js"></script>
 </body>
 
 </html>

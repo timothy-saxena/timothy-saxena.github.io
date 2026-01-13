@@ -1,4 +1,4 @@
-    :root {
+/*     :root {
         --bg: #0f172a;
         --card: #111827;
         --text: #e5e7eb;
@@ -67,7 +67,7 @@
         padding: 80px 24px;
     }
  */
-    section {
+/*     section {
         position: relative;
         z-index: 1;
     }
@@ -134,4 +134,232 @@
         margin-bottom: 12px;
         font-size: 1rem;
         color: var(--text);
+    } */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+:root {
+    --bg-color: #000000;
+    --text-color: #e5e7eb;
+    --main-color: #00cc66;
+    /* softer green */
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* Matrix Canvas */
+canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.45;
+}
+
+/* Header / Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    gap: 4rem;
+}
+
+.navbar a {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    border-bottom: 2px solid var(--main-color);
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Home */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home h1 {
+    font-size: 5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.text-container {
+    margin: 2rem 0;
+}
+
+.text {
+    font-size: 3rem;
+    color: var(--main-color);
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.text.active {
+    opacity: 1;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.social-icons a {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: var(--text-color);
+}
+
+/* About */
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+.about-content {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--main-color);
+}
+
+.about-text p {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    border: 1px solid var(--main-color);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* Projects */
+.projects-container {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-item {
+    padding: 2rem;
+    border-left: 3px solid var(--main-color);
+    background: rgba(0, 0, 0, 0.75);
+    transition: transform 0.2s;
+    color: var(--text-color);
+}
+
+.project-item:hover {
+    transform: translateX(6px);
+    background: rgba(0, 204, 102, 0.1);
+}
+
+.project-item h3 {
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+/* Skills */
+.skills-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.skills-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--main-color);
+    border-radius: 1.5rem;
+    padding: 3rem;
+}
+
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skill-bar {
+    height: 0.8rem;
+    background: rgba(0, 204, 102, 0.15);
+    border-radius: 0.4rem;
+}
+
+.skill-fill {
+    height: 100%;
+    background: var(--main-color);
+    width: 0;
+    transition: width 1s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
     }
+
+    .navbar {
+        gap: 2rem;
+    }
+}
