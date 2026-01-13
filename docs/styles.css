@@ -136,34 +136,36 @@
         color: var(--text);
     } */
 
+/* RESET + BASE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    scroll-behavior: smooth;
-    font-family: 'Share Tech Mono', monospace;
 }
 
 :root {
     --bg-color: #000000;
     --text-color: #e5e7eb;
     --main-color: #00cc66;
-    /* softer green */
 }
 
+/* BASE FONT SIZING — FIXES YOUR MAIN ISSUE */
 html {
-    font-size: 62.5%;
-    overflow-x: hidden;
+    font-size: 18px;
+    /* IMPORTANT: readable base */
+    scroll-behavior: smooth;
 }
 
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1.6;
     min-height: 100vh;
 }
 
-/* Matrix Canvas */
+/* MATRIX CANVAS */
 canvas {
     position: fixed;
     inset: 0;
@@ -171,29 +173,28 @@ canvas {
     opacity: 0.45;
 }
 
-/* Header / Navbar */
+/* NAVBAR */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 1.5rem 8%;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
     z-index: 1000;
 }
 
 .navbar {
     display: flex;
-    gap: 4rem;
+    justify-content: center;
+    gap: 3rem;
 }
 
 .navbar a {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     color: var(--main-color);
+    padding-bottom: 4px;
     border-bottom: 2px solid transparent;
-    transition: 0.2s;
 }
 
 .navbar a:hover,
@@ -201,15 +202,36 @@ canvas {
     border-bottom: 2px solid var(--main-color);
 }
 
-/* Sections */
+/* SECTIONS — FIXES SPACING */
 section {
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 10rem 8% 5rem;
     position: relative;
     z-index: 1;
 }
 
-/* Home */
+/* HEADINGS — FIXES HIERARCHY */
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+/* HOME */
 .home {
     display: flex;
     justify-content: center;
@@ -217,41 +239,42 @@ section {
 }
 
 .home-content {
-    max-width: 600px;
-}
-
-.home h1 {
-    font-size: 5rem;
-    color: var(--main-color);
-    margin-bottom: 1rem;
+    max-width: 700px;
+    text-align: center;
 }
 
 .text-container {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
 }
 
 .text {
-    font-size: 3rem;
+    font-size: 2.2rem;
     color: var(--main-color);
     opacity: 0;
-    transition: opacity 1.5s ease;
+    transition: opacity 1.2s ease;
 }
 
 .text.active {
     opacity: 1;
 }
 
-/* Social Icons */
+.home p {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+/* SOCIAL ICONS */
 .social-icons {
     display: flex;
+    justify-content: center;
     gap: 2rem;
     margin-top: 3rem;
 }
 
 .social-icons a {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: var(--main-color);
-    transition: transform 0.2s, color 0.2s;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .social-icons a:hover {
@@ -259,76 +282,77 @@ section {
     color: var(--text-color);
 }
 
-/* About */
-.heading {
-    text-align: center;
-    font-size: 4rem;
-    margin-bottom: 4rem;
-}
-
+/* ABOUT */
 .about-content {
-    background: rgba(0, 0, 0, 0.8);
+    max-width: 900px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.75);
     padding: 3rem;
     border-radius: 1.5rem;
     border: 1px solid var(--main-color);
 }
 
 .about-text p {
-    font-size: 1.6rem;
+    font-size: 1.05rem;
     margin-bottom: 1.5rem;
-    line-height: 1.8;
 }
 
 .skills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
+    margin-top: 2.5rem;
 }
 
 .skill-category {
     border: 1px solid var(--main-color);
-    padding: 2rem;
+    padding: 1.8rem;
     border-radius: 1rem;
 }
 
-/* Projects */
+.skill-category h4 {
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+/* PROJECTS */
 .projects-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.2rem;
 }
 
 .project-item {
-    padding: 2rem;
-    border-left: 3px solid var(--main-color);
-    background: rgba(0, 0, 0, 0.75);
-    transition: transform 0.2s;
+    background: rgba(0, 0, 0, 0.7);
+    border-left: 4px solid var(--main-color);
+    padding: 2rem 2.5rem;
+    transition: transform 0.2s ease;
     color: var(--text-color);
 }
 
 .project-item:hover {
     transform: translateX(6px);
-    background: rgba(0, 204, 102, 0.1);
+    background: rgba(0, 204, 102, 0.12);
 }
 
-.project-item h3 {
-    color: var(--main-color);
-    margin-bottom: 1rem;
+.project-item p {
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
-/* Skills */
+/* SKILLS */
 .skills-grid {
     max-width: 1000px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 3rem;
 }
 
 .skills-card {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.75);
     border: 1px solid var(--main-color);
     border-radius: 1.5rem;
     padding: 3rem;
@@ -340,10 +364,17 @@ section {
     gap: 2rem;
 }
 
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
 .skill-bar {
-    height: 0.8rem;
+    height: 0.9rem;
     background: rgba(0, 204, 102, 0.15);
-    border-radius: 0.4rem;
+    border-radius: 0.45rem;
+    overflow: hidden;
 }
 
 .skill-fill {
@@ -353,13 +384,45 @@ section {
     transition: width 1s ease;
 }
 
-/* Responsive */
+/* METRICS */
+.metrics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.metric-item {
+    padding: 1.4rem;
+    border: 1px solid var(--main-color);
+    border-radius: 1rem;
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
     html {
-        font-size: 55%;
+        font-size: 16px;
+    }
+
+    section {
+        padding: 9rem 6% 4rem;
     }
 
     .navbar {
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .text {
+        font-size: 1.8rem;
     }
 }
