@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             drops[i]++;
         }
     }
-    setInterval(draw, 20);
+    setInterval(draw, 40);
 
 
 
