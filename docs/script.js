@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             drops[i]++;
         }
     }
-    setInterval(draw, 40);
+    setInterval(draw, 30);
 
 
 
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-const text1 = document.getElementById('text1');
+/* const text1 = document.getElementById('text1');
 const text2 = document.getElementById('text2');
 
 let currentText = 1;
@@ -78,6 +78,21 @@ setInterval(() => {
         currentText = 1;
     }
 }, 3000);
+ */
+const line2 = document.getElementById("line2");
+
+function animateTagline() {
+    // show second line
+    line2.style.opacity = "0.75";
+
+    // hide after visible for a while
+    setTimeout(() => {
+        line2.style.opacity = "0";
+    }, 2000);
+}
+
+// start loop
+setInterval(animateTagline, 3500);
 
 
 // Initialize skill bars

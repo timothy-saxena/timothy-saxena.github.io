@@ -361,6 +361,23 @@ span {
     opacity: 1;
 }
 
+.taglines {
+    margin: 2rem 0;
+}
+
+.tagline {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    letter-spacing: 1px;
+}
+
+.tagline.secondary {
+    font-size: 1.8rem;
+    opacity: 0;
+    margin-top: 0.6rem;
+    transition: opacity 0.8s ease;
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
     html {
