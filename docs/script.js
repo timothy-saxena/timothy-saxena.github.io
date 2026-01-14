@@ -64,16 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function animateTagline() {
         // show second line
-        line2.style.opacity = "0.75";
+        line2.style.opacity = "1";
 
         // hide after visible for a while
         setTimeout(() => {
             line2.style.opacity = "0";
-        }, 1000);
+        }, 1250);
     }
 
     // start loop
-    setInterval(animateTagline, 1750);
+    setInterval(animateTagline, 2000);
 
 });
 
