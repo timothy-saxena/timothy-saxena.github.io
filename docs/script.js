@@ -88,11 +88,11 @@ function animateTagline() {
     // hide after visible for a while
     setTimeout(() => {
         line2.style.opacity = "0";
-    }, 2000);
+    }, 1000);
 }
 
 // start loop
-setInterval(animateTagline, 3500);
+setInterval(animateTagline, 1750);
 
 
 // Initialize skill bars
