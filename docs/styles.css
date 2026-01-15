@@ -378,6 +378,70 @@ span {
     transition: opacity 0.8s ease;
 }
 
+/* Experience Section */
+.experience {
+    padding: 6rem 9% 2rem;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 3rem auto;
+}
+
+.experience-item {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-left: 3px solid var(--main-color);
+    transition: 0.1s ease;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px var(--main-color, #27992920);
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+    transition: 0.1s ease;
+}
+
+.experience-item:hover {
+    transform: translateX(10px);
+    background: rgba(39, 153, 39, 0.1);
+}
+
+.experience-item:hover::before {
+    box-shadow: 0 0 30px var(--main-color);
+}
+
+.experience-item h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+    text-shadow: 0 0 5px var(--main-color);
+}
+
+.experience-item p {
+    font-size: 1.4rem;
+    opacity: 0.85;
+    margin-bottom: 0.5rem;
+    transition: 0.1s ease;
+}
+
+.experience-item:hover p {
+    opacity: 1;
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
     html {
