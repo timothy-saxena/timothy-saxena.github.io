@@ -425,7 +425,7 @@ span {
 }
 
 .experience-item h3 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--main-color);
     text-shadow: 0 0 5px var(--main-color);
