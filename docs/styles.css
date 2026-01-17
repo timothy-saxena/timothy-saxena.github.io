@@ -612,6 +612,15 @@ span {
     opacity: 0.9;
 }
 
+/* Achievements Outer Box */
+.achievements-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 3rem;
+    border-radius: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .achievements-list li::before {
     content: "✓";
     position: absolute;
