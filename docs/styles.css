@@ -592,6 +592,34 @@ span {
     margin-bottom: 1.5rem;
 }
 
+/* Achievements Section */
+.achievements-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.achievements-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.achievements-list li {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 1.4rem;
+    padding-left: 2.5rem;
+    position: relative;
+    opacity: 0.9;
+}
+
+.achievements-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
 /* Buttons */
 .project-links a {
     display: inline-block;
