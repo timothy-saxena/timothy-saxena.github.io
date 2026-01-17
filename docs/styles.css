@@ -552,7 +552,7 @@ span {
 /* Project Image */
 .project-img {
     aspect-ratio: 16 / 9;
-    background: #fff;
+    background: #000000;
 }
 
 .project-img img {
