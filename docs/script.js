@@ -60,21 +60,21 @@ document.addEventListener('DOMContentLoaded', () => {
         drops = [];
         for (var x = 0; x < columns; x++) drops[x] = 1;
     });
-    const line2 = document.getElementById("line2");
-
-    function animateTagline() {
-        // show second line
-        line2.style.opacity = "1";
-
-        // hide after visible for a while
-        setTimeout(() => {
-            line2.style.opacity = "0";
-        }, 1250);
-    }
-
-    // start loop
-    setInterval(animateTagline, 2000);
-
+    /*     const line2 = document.getElementById("line2");
+    
+        function animateTagline() {
+            // show second line
+            line2.style.opacity = "1";
+    
+            // hide after visible for a while
+            setTimeout(() => {
+                line2.style.opacity = "0";
+            }, 1250);
+        }
+    
+        // start loop
+        setInterval(animateTagline, 2000);
+     */
 });
 
 /* const text1 = document.getElementById('text1');
