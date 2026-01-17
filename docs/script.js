@@ -25,9 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setInterval(draw, 30);
 
-
-
-
     const menuIcon = document.querySelector('#menu-icon');
     const navbar = document.querySelector('.navbar');
 
@@ -75,25 +72,31 @@ document.addEventListener('DOMContentLoaded', () => {
         // start loop
         setInterval(animateTagline, 2000);
      */
+    //scroll spy
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".navbar a");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (scrollY >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+            }
+        });
+    });
+
 });
-
-/* const text1 = document.getElementById('text1');
-const text2 = document.getElementById('text2');
-
-let currentText = 1;
-
-setInterval(() => {
-    if (currentText === 1) {
-        text1.classList.remove('active');
-        text2.classList.add('active');
-        currentText = 2;
-    } else if (currentText === 2) {
-        text2.classList.remove('active');
-        text1.classList.add('active');
-        currentText = 1;
-    }
-}, 3000);
- */
 
 
 // Initialize skill bars
