@@ -97,6 +97,7 @@ canvas {
     color: var(--main-color);
     display: none;
     cursor: pointer;
+    position: right;
 }
 
 @media (max-width: 768px) {
