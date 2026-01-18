@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var ctx = c.getContext("2d");
     c.height = window.innerHeight;
     c.width = window.innerWidth;
-    var txts = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var txts = "01(){}[]<>;:=+-*/";
     txts = txts.split("");
     var font_size = 13.5;
     var columns = c.width / font_size;
