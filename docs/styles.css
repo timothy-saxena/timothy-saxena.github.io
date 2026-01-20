@@ -20,6 +20,67 @@ html {
     overflow-x: hidden;
 }
 
+/* ================= SKILLS SECTION ================= */
+
+.skills-section {
+    position: relative;
+}
+
+.skills-box {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 1px solid var(--main-color);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills-category {
+    margin-bottom: 3rem;
+}
+
+.skills-category h3 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    padding: 0.9rem 1.6rem;
+    border-radius: 0.8rem;
+
+    background: rgba(39, 153, 39, 0.08);
+    border: 1px solid rgba(39, 153, 39, 0.4);
+
+    font-size: 1.4rem;
+    color: var(--text-color);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-item i {
+    color: var(--main-color);
+    font-size: 1.5rem;
+}
+
+.skill-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px var(--main-color);
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -304,33 +365,6 @@ span {
     font-size: 1.6rem;
     line-height: 1.8;
     margin-bottom: 1rem;
-}
-
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.skill-category {
-    background: rgba(39, 153, 39, 0.1);
-    padding: 2rem;
-    border-radius: 1rem;
-    border: 1px solid var(--main-color);
-}
-
-.skill-category h4 {
-    font-size: 1.8rem;
-    color: var(--main-color);
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-}
-
-.skill-category p {
-    font-size: 1.6rem;
-    margin: 0;
-    line-height: 2;
 }
 
 /* Projects Section */
@@ -676,9 +710,6 @@ span {
         text-align: center;
     }
 
-    .skill-category {
-        padding: 1.5rem;
-    }
 
     .text-container {
         height: 1.5em;
@@ -702,9 +733,6 @@ span {
     }
 
     .about-content,
-    .skill {
-        padding: 2rem;
-    }
 
     .social-icons a {
         width: 3.5rem;
@@ -728,22 +756,8 @@ span {
     }
 
     .about-content,
-    .skill {
-        padding: 1.5rem;
-    }
 }
 
-@media (max-width: 600px) {
-    .skill {
-        width: 95%;
-        padding: 15px;
-    }
-
-    .skill li {
-        margin: 15px 0;
-        padding: 8px;
-    }
-}
 
 @media (max-width: 600px) {
     .project-img {
