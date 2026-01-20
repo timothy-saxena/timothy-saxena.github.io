@@ -281,11 +281,11 @@ canvas {
 }
 
 section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 8rem 9% 4rem;
     position: relative;
     z-index: 1;
 }
+
 
 .home {
     display: flex;
@@ -293,6 +293,10 @@ section {
     justify-content: center;
     gap: 5rem;
     padding-top: 7rem;
+}
+
+.home {
+    min-height: 100vh;
 }
 
 .home-content {
