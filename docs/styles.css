@@ -26,13 +26,41 @@ html {
     position: relative;
 }
 
+/* ===== SKILLS OUTER BOX (EXPERIENCE STYLE) ===== */
+
 .skills-box {
-    background: rgba(0, 0, 0, 0.85);
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
     padding: 3rem;
     border-radius: 2rem;
-    border: 1px solid var(--main-color);
-    max-width: 1000px;
-    margin: 0 auto;
+
+    border-left: 3px solid var(--main-color);
+    box-shadow: 0 0 15px rgba(39, 153, 39, 0.2);
+
+    transition: 0.15s ease;
+    overflow: hidden;
+}
+
+/* glowing accent line */
+.skills-box::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+    transition: 0.15s ease;
+}
+
+/* hover behavior */
+.skills-box:hover {
+    background: rgba(39, 153, 39, 0.08);
+}
+
+.skills-box:hover::before {
+    box-shadow: 0 0 30px var(--main-color);
 }
 
 .skills-category {
@@ -79,6 +107,47 @@ html {
 .skill-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 0 18px var(--main-color);
+}
+
+.skill-item {
+    position: relative;
+    overflow: hidden;
+    border-left: 2px solid var(--main-color);
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 12px rgba(39, 153, 39, 0.15);
+}
+
+/* Green glowing accent line */
+.skill-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--main-color);
+    box-shadow: 0 0 12px var(--main-color);
+    transition: 0.2s ease;
+}
+
+/* Hover effect */
+.skill-item:hover {
+    background: rgba(39, 153, 39, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Intensify glow on hover */
+.skill-item:hover::before {
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.skill-item span,
+.skill-item {
+    transition: 0.2s ease;
+}
+
+.skill-item:hover {
+    color: var(--text-color);
 }
 
 body {
@@ -748,16 +817,6 @@ span {
         font-size: 3em;
     }
 }
-
-@media (max-width: 365px) {
-    .home-img img {
-        width: 60vw;
-        height: 40vw;
-    }
-
-    .about-content,
-}
-
 
 @media (max-width: 600px) {
     .project-img {
