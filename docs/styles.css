@@ -26,7 +26,7 @@ html {
     position: relative;
 }
 
-/* ===== SKILLS OUTER BOX (EXPERIENCE STYLE) ===== */
+/* ===== SKILLS OUTER BOX ( STYLE) ===== */
 
 .skills-box {
     position: relative;
@@ -36,6 +36,7 @@ html {
 
     border-left: 3px solid var(--main-color);
     box-shadow: 0 0 15px rgba(39, 153, 39, 0.2);
+    box-shadow: 0 0 15px var(--main-color, #27992920);
 
     transition: 0.15s ease;
     overflow: hidden;
@@ -68,7 +69,7 @@ html {
 }
 
 .skills-category h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--main-color);
     margin-bottom: 1.5rem;
     display: flex;
@@ -93,7 +94,7 @@ html {
     background: rgba(39, 153, 39, 0.08);
     border: 1px solid rgba(39, 153, 39, 0.4);
 
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: var(--text-color);
 
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -101,7 +102,7 @@ html {
 
 .skill-item i {
     color: var(--main-color);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .skill-item:hover {
@@ -149,6 +150,8 @@ html {
 .skill-item:hover {
     color: var(--text-color);
 }
+
+/* ================= SKILLS SECTION ================= */
 
 body {
     background-color: var(--bg-color);
@@ -382,8 +385,6 @@ span {
     opacity: 3;
 }
 
-
-
 .social-icons {
     display: flex;
     flex-wrap: wrap;
@@ -570,7 +571,7 @@ span {
 }
 
 .experience-item p {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     opacity: 0.85;
     margin-bottom: 0.5rem;
     transition: 0.1s ease;
@@ -681,14 +682,15 @@ span {
 }
 
 .project-info p {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     line-height: 1.7;
     opacity: 0.9;
     margin-bottom: 1rem;
 }
 
 .tech-stack {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
+    /* used to be 1.3 */
     color: #9cff9c;
     margin-bottom: 1.5rem;
 }
@@ -705,7 +707,7 @@ span {
 }
 
 .achievements-list li {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.8;
     margin-bottom: 1.4rem;
     padding-left: 2.5rem;
@@ -728,6 +730,47 @@ span {
     left: 0;
     color: var(--main-color);
     font-weight: bold;
+}
+
+/* ===== ACHIEVEMENTS OUTER BOX ( STYLE) ===== */
+
+.achievements-box {
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 3rem;
+    border-radius: 2rem;
+
+    max-width: 900px;
+    margin: 0 auto;
+
+    border-left: 3px solid var(--main-color);
+    box-shadow: 0 0 15px rgba(39, 153, 39, 0.2);
+    box-shadow: 0 0 15px var(--main-color, #27992920);
+
+    transition: 0.15s ease;
+    overflow: hidden;
+}
+
+/* glowing accent line */
+.achievements-box::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+    transition: 0.15s ease;
+}
+
+/* hover behavior */
+.achievements-box:hover {
+    background: rgba(39, 153, 39, 0.08);
+}
+
+.achievements-box:hover::before {
+    box-shadow: 0 0 30px var(--main-color);
 }
 
 /* Buttons */
